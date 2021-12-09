@@ -6,9 +6,9 @@ public class Assignment1 {
 		Scanner ls = new Scanner(System.in);
 		
 		//Declare the variables
-		int modern=25 ; 	int vintage=30; int traditional=35; int custom = 45;//per sqf
+		int modern=25 ; int vintage=30; int traditional=35; int custom = 45;//per sqf
 		
-		double width, length; double total_area; //room size (rm 70 per square feet)
+		double width, length; double total_area; //room size 
 		
 		double price10, price11, price12, price13, price14, price1, price2; 
 		
