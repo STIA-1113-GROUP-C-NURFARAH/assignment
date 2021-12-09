@@ -1,0 +1,71 @@
+Enter width(in ft): 
+10
+Enter length (in ft): 
+10
+
+
+* * * * * * * * * Type of Design * * * * * * * * * * * *
+*                                                      *
+*  Modern                                              *
+*  Vintage                                             *
+*  Traditional                                         *
+*  Custom                                              *
+*                                                      *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * **
+
+* * * * * * * Colours * * * * * * * * * * * * * * * * *
+*                                                     *
+*  Basic Colours: Black,White,Green,Blue,Red,Yellow   *
+*  Premium colours: Gold,Silver,Rose Gold             *
+*                                                     *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+* * * * * * * Package * * * * * * * * 
+*                                   *
+*  Set A: Modern + Basic            *
+*  Set B: Vintage + Basic           *
+*  Set C: Traditional + Basic       *
+*  Set D: Modern + Premium          *
+*  Set E: Vintage + Premium         *
+*  Set F: Traditional + Premium     *
+*  Set G: Custom + Basic            *
+*  Set H: Custom + Premium          *
+*                                   *
+*                                   *
+* * * * * * * * * * * * * * * * * * *
+
+
+
+________________________________________
+
+          **NFWZ DESIGNER**    
+________________________________________
+
+   For Room size = 100.0 sqf
+----------------------------------------
+   Set A: Modern + Basic
+   Total charge for set A = RM 2720.0
+
+   Set B: Vintage + Basic
+   Total charge for set B = RM 3220.0
+
+   Set C: Traditional + Basic
+   Total charge for set C = RM 3720.0
+
+   Set D: Modern + Premium
+   Total charge for set D = RM 2800.0
+
+   Set E: Vintage + Premium
+   Total charge for set E = RM 3300.0
+
+   Set F: Traditional + Premium
+   Total charge for set F = RM 3800.0
+
+   Set G: Custom + Basic
+   Total charge for set G = RM 4720.0
+
+   Set H: Custom + Premium
+   Total charge for set H = RM 4800.0
+
+________________________________________
