@@ -1,0 +1,185 @@
+package assignment1;
+import java.util.Scanner;
+public class Assignment1 {
+
+	public static void main(String[] args) {
+		Scanner ls = new Scanner(System.in);
+		
+		//Declare the variables
+		int type1; int type2; int type3;
+		int modern=25 ; 	int vintage=30; int traditional=35; int custom = 45;//per sqf
+		
+		double width, length; double total_area; //room size (rm 70 per square feet)
+		
+		double price10, price11, price12, price13,price1, price2; 
+		
+		double set_A;  /*(modern + basic)*/ double set_B;  /*(vintage + basic)*/ double set_C;  /*(traditional + basic)*/  
+		double set_D; /*(modern + premium)*/ double set_E; /*(vintage + premium)*/ double set_F; //(traditional + premium)
+		double set_G; double set_H;
+		
+		double basic = 2.20; /*Rm 2.20 per square feet*/ double premium = 3.00; /*Rm 3.00 per square feet*/
+		
+		String a = "Modern + Basic", b = "Vintage + Basic", c = "Traditional + Basic", d = "Modern + Premium", e = "Vintage + Premium", f = "Traditional + Premium";
+		String g= "Custom + Basic", h ="Custom + Premium";
+				
+				//user insert The Design is for?
+				System.out.println("The Design is for?");
+				System.out.println("[1] living room [2] bedroom [3]kitchen");
+				type1 = ls.nextInt(); //Enter number 1
+				System.out.println("**Living Room**");
+				type2 = ls.nextInt(); //Enter number 2
+				System.out.println("**Bedroom**");
+				type2 = ls.nextInt(); //Enter number 3
+				System.out.println("**Kitchen**");
+				
+				System.out.println();
+				
+		
+				//user insert room size
+				System.out.println("Enter width(in ft): ");
+				width = ls.nextDouble();
+				System.out.println("Enter length (in ft): ");
+				length =ls.nextDouble();
+				
+				
+				System.out.println();
+				
+				//Calculate total area
+				total_area = width * length; 
+				
+				
+				//Calculate price for design
+				price10 = modern * total_area;
+				price11 = vintage * total_area;
+				price12= traditional * total_area;
+				price13 = custom * total_area;
+				
+				
+				//Calculate for room painting
+				price1 = total_area * basic;
+				price2 = total_area * premium;
+				
+				//Calculate price for each set 
+				set_A = price10 + price1;
+				set_B = price11 + price1;
+				set_C = price12 + price1; 
+				set_D = price10 + price2; 
+				set_E = price11 + price2; 
+				set_F = price12 + price2;
+				set_G = price13 + price1;
+				set_H = price13 + price2;
+				
+				//Display type of design
+						System.out.println("\n* * * * * * * * * Type of Design * * * * * * * * * * * *");
+						System.out.print("*                                                      *");
+						System.out.println();
+						System.out.println("*  Modern                                              *");
+						System.out.println("*  Vintage                                             *");
+						System.out.println("*  Traditional                                         *");
+						System.out.println("*  Custom                                              *");
+						System.out.print("*                                                      *");
+						System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * **");
+						
+				
+				
+				
+				//Display colours
+						System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * *");
+						System.out.print("*                                                     *");
+						System.out.println();
+						System.out.println("*  Basic Colours: Black,White,Green,Blue,Red,Yellow   *");
+						System.out.println("*  Premium colours: Gold,Silver,Rose Gold             *");
+						System.out.print("*                                                     *");
+						System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+				
+				System.out.println();
+			
+				
+				//Display type of package
+					System.out.println("\n* * * * * * * Package * * * * * * * * ");
+					System.out.print("*                                   *");
+					System.out.println();
+					System.out.println("*  Set A: " + a + "            *");
+					System.out.println("*  Set B: " + b + "           *");
+					System.out.println("*  Set C: " + c + "       *");
+					System.out.println("*  Set D: " + d + "          *");
+					System.out.println("*  Set E: " + e + "         *");
+					System.out.println("*  Set F: " + f + "     *");
+					System.out.println("*  Set G: " + g + "            *");
+					System.out.println("*  Set H: " + h + "          *");
+					System.out.println("*                                   *");
+					System.out.print("*                                   *");
+					System.out.println("\n* * * * * * * * * * * * * * * * * * *");
+				
+				
+				System.out.println();
+				System.out.println();
+				
+				//Display set and total charges for each set
+				
+					System.out.println("\n________________________________________");
+					System.out.println();
+					System.out.print("          **MERIDIAN INTERIORS**    ");
+					System.out.println("\n________________________________________");
+				
+					
+				
+				
+				System.out.println();
+				
+					System.out.print("   For Room size = " + total_area + " sqf");
+					System.out.print("\n----------------------------------------");
+					System.out.println();
+				
+					System.out.println("   Set A: " + a);
+					System.out.println("   Total charge for set A = RM " + set_A);
+				
+				System.out.println();
+				
+					System.out.println("   Set B: " + b);
+					System.out.println("   Total charge for set B = RM " + set_B);
+				
+				System.out.println();
+				
+					System.out.println("   Set C: " + c);
+					System.out.println("   Total charge for set C = RM " + set_C);
+				
+				System.out.println();
+				
+					System.out.println("   Set D: " + d);
+					System.out.println("   Total charge for set D = RM " + set_D);
+				
+				System.out.println();
+
+					System.out.println("   Set E: " + e);
+					System.out.println("   Total charge for set E = RM " + set_E);
+				
+				System.out.println();
+				
+					System.out.println("   Set F: " + f);
+					System.out.println("   Total charge for set F = RM " + set_F);
+				
+				System.out.println();
+				
+					System.out.println("   Set G: " + g);
+					System.out.println("   Total charge for set G = RM " + set_G);
+				
+				System.out.println();
+				
+					System.out.println("   Set H: " + h);
+					System.out.println("   Total charge for set H = RM " + set_H);
+				
+				
+				
+				
+				System.out.println("\n________________________________________");
+
+				
+				
+
+
+
+
+	}
+
+}
