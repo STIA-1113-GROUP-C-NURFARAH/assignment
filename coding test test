@@ -1,0 +1,105 @@
+package assignment2;
+import java.util.Scanner;
+public class Assignment2 {
+
+	public static void main(String[] args) {
+				
+		Scanner ls = new Scanner(System.in);
+		System.out.println("Hello, Welcome to MERIDAN INTERIORS! ");
+		System.out.println("Please make sure you insert the right code and spelling while filling the form :D");
+		System.out.println("Do follow the instructions below.");
+		System.out.println();
+		
+		System.out.println("\n________________________________________");
+		System.out.println();
+		System.out.print("          **MERIDIAN INTERIORS**    ");
+		System.out.println("\n________________________________________");
+		System.out.println();
+		System.out.println();
+		
+		
+		String t1= "LIVING ROOM", t2 ="BEDROOM", t3 = "STUDY ROOM", t4= "GAMING ROOM", t5= "STUDIO", t6= "KITCHEN", t7= "TOILET"; 
+		
+		System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [4] studio, [5] kitchen, or [6] toilet");
+		System.out.println("Enter code:  ");
+		int type = ls.nextInt(); 
+		
+		while (type != 1 && type != 2 && type != 3 && type != 4 && type != 5 && type != 6 && type != 7) {
+			System.out.println();
+			System.out.println("INVALID");
+			System.out.println("Enter code: ");
+			type = ls.nextInt(); 
+			
+			
+		}
+			
+		switch(type) {
+		case 1:
+			System.out.println("| DESIGN FOR " + t1 + " |");
+			break;
+		case 2:
+			System.out.println("| DESIGN FOR " + t2 + " |");
+			break;
+		case 3:
+			System.out.println("| DESIGN FOR " + t3 + " |");
+			break;
+		case 4:
+			System.out.println("| DESIGN FOR " + t4 + " |");
+			break;
+		case 5:	
+			System.out.println("| DESIGN FOR " + t5 + " |");
+			break;
+		case 6:
+			System.out.println("| DESIGN FOR " + t6 + " |");
+			break;
+		case 7:
+			System.out.println("| DESIGN FOR " + t7 + " |");
+			break;
+		default:
+			System.out.println("Invalid code :(");
+			
+			
+	
+			
+	{
+		//Display type of design
+		System.out.println("\n* * * * * * * * * Type of Design * * * * * * * * * * * *");
+		System.out.print("*                                                      *");
+		System.out.println();
+		System.out.println("*  Modern                                              *");
+		System.out.println("*  Vintage                                             *");
+		System.out.println("*  Traditional                                         *");
+		System.out.println("*  Custom                                              *");
+		System.out.print("*                                                      *");
+		System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * **");
+		System.out.println();
+		
+		String design1 = "Modern", design2 = "Vintage", design3 = "Traditional", design4 = "Custom";
+		System.out.println("Please Choose Your Design: ");
+		String design = ls.next();
+		
+		if (design == "Modern") {
+			System.out.println("Type of design: " + design1);
+		}else if (design == "Vintage") {
+			System.out.println("Type of design: " + design2);
+		}else if (design == "Traditional") {
+			System.out.println("Type of design: " + design3);	
+		}else if (design == "Custom") {
+			System.out.println("Type of design: " + design4);
+		}
+	}
+		
+		
+						
+				{
+					
+				
+				
+			
+			}
+	
+	}
+}
+}
+
+
