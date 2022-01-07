@@ -1,0 +1,822 @@
+package assignment2;
+import java.util.Scanner;
+public class Assignment2 {public static void main(String[] args) {
+		
+		Scanner ls = new Scanner(System.in);
+
+		String a = "Modern + Basic", b = "Modern + Premium", c = "Vintage + Basic", d = " Vintage + Premium", e = "Traditional + Basic", f = "Traditional + Premium";
+		String g= "Custom + Basic", h ="Custom + Premium";
+		double price10, price11, price12, price13,price14,price15,price16,price17, price1, price2; 
+		
+				
+		
+		System.out.println("Hello, Welcome to MERIDAN INTERIORS! ");
+		System.out.println("Please make sure you insert the right code and spelling while filling the form :D");
+		System.out.println("Do follow the instructions below.");
+		System.out.println();
+		
+		System.out.println("\n________________________________________");
+		System.out.println();
+		System.out.print("          **MERIDIAN INTERIORS**    ");
+		System.out.println("\n________________________________________");
+		System.out.println();
+		System.out.println();
+				
+				//Display type of package
+					System.out.println("\n* * * * * * * Package * * * * * * * * ");
+					System.out.print("*                                   *");
+					System.out.println();
+					System.out.println("*  1-Set A: " + a + "          *");
+					System.out.println("*  2-Set B: " + b + "        *");
+					System.out.println("*  3-Set C: " + c + "         *");
+					System.out.println("*  4-Set D: " + d + "      *");
+					System.out.println("*  5-Set E: " + e + "     *");
+					System.out.println("*  6-Set F: " + f + "   *");
+					System.out.println("*  7-Set G: " + g + "          *");
+					System.out.println("*  8-Set H: " + h + "        *");
+					System.out.println("*                                   *");
+					System.out.print("*                                   *");
+					System.out.println("\n* * * * * * * * * * * * * * * * * * *");
+				
+				
+				System.out.println();
+				System.out.println();
+				
+				System.out.println();
+				
+				System.out.println("Please Choose Your Package: ");
+				int set = ls.nextInt();
+				
+				
+				while (set != 1 && set != 2 && set != 3 && set != 4 && set != 5 && set != 6 && set != 7 && set != 8) {
+					System.out.println();
+					System.out.println("INVALID");
+					System.out.println();
+					System.out.println("Please Choose Your Package: ");
+					set = ls.nextInt(); 
+				}
+				
+		
+				
+			
+		switch(set) {
+		
+		case 1:
+			
+			//user insert room size
+			double width,length,total_area;
+			System.out.println("Enter width(in ft): ");
+			width = ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area = width * length; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Basic Colours: [1] Black [2] White [3] Green [4] Blue [5] Red [6] Yellow *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice1= ls.nextInt();
+
+			String t1= "LIVING ROOM", t2 ="BEDROOM", t3 = "STUDY ROOM", t4= "GAMING ROOM", t5= "STUDIO", t6= "KITCHEN", t7= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type = ls.nextInt(); 
+			
+			while (type != 1 && type != 2 && type != 3 && type != 4 && type != 5 && type != 6 && type != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type = ls.nextInt(); 
+			}
+				//Calculate price for design
+				int modern=25 ; 
+				price10 = modern * total_area;
+				//Calculate for room painting
+				double basic = 2.20; /*Rm 2.20 per square feet*/
+				price1 = total_area * basic;
+				
+				//Calculate Total Price for Set A
+				double set_A;  /*(modern + basic)*/
+				set_A = price10 + price1;
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type == 1) {
+					System.out.println("| DESIGN FOR " + t1 + " |");
+				}else if (type == 2) {
+					System.out.println("| DESIGN FOR " + t2 + " |");
+				}else if (type == 3) {	
+					System.out.println("| DESIGN FOR " + t3 + " |");
+				}else if (type == 4) {
+					System.out.println("| DESIGN FOR " + t4 + " |");
+				}else if (type == 5) {
+					System.out.println("| DESIGN FOR " + t5 + " |");
+				}else if (type == 6) {
+					System.out.println("| DESIGN FOR " + t6 + " |");
+				}else if (type == 7) {
+					System.out.println("| DESIGN FOR " + t7 + " |");
+					
+				}
+					System.out.println();
+					System.out.println("Set A: " + a);
+						
+				if (choice1 == 1) {
+					System.out.print("Colour: Black");
+					
+				}else if (choice1 == 2) {
+					System.out.println("Colour: White");
+				}else if (choice1 ==3) {
+					System.out.println("Colour:Green");	
+				}else if (choice1 == 4) {
+					System.out.println("Colour: Blue");
+				}else if (choice1 ==5) {
+					System.out.println("Colour:Red");	
+				}else if (choice1 ==6)
+					System.out.println("Colour:Yellow");		
+				System.out.println();
+				System.out.print("Room size = " + total_area + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_A);
+					
+					break;
+		case 2:
+			
+			//user insert room size
+			double width2,length2,total_area2;
+			System.out.println("Enter width(in ft): ");
+			width2 = ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length2 =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area2 = width2 * length2; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Premium Colours: [1] Gold [2] Silver [3] Rose Gold                       *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice2= ls.nextInt();
+
+			String t1b= "LIVING ROOM", t2b ="BEDROOM", t3b = "STUDY ROOM", t4b= "GAMING ROOM", t5b= "STUDIO", t6b= "KITCHEN", t7b= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type2 = ls.nextInt(); 
+			
+			while (type2 != 1 && type2 != 2 && type2 != 3 && type2 != 4 && type2 != 5 && type2 != 6 && type2 != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type2 = ls.nextInt(); 
+			}
+				//Calculate price for design
+				int modern2=25 ; 
+				price10 = modern2 * total_area2;
+				//Calculate for room painting
+				double premium1 = 3.00; /*Rm 3.00 per square feet*/
+				price2 = total_area2 * premium1;
+				
+				//Calculate Total Price for Set B
+				double set_B;  /*(modern + premium*/
+				set_B = price10 + price2;
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type2 == 1) {
+					System.out.println("| DESIGN FOR " + t1b + " |");
+				}else if (type2 == 2) {
+					System.out.println("| DESIGN FOR " + t2b + " |");
+				}else if (type2 == 3) {	
+					System.out.println("| DESIGN FOR " + t3b + " |");
+				}else if (type2 == 4) {
+					System.out.println("| DESIGN FOR " + t4b + " |");
+				}else if (type2 == 5) {
+					System.out.println("| DESIGN FOR " + t5b + " |");
+				}else if (type2 == 6) {
+					System.out.println("| DESIGN FOR " + t6b + " |");
+				}else if (type2 == 7) {
+					System.out.println("| DESIGN FOR " + t7b + " |");
+					
+				}
+					System.out.println();
+					System.out.println("Set B: " + b);
+						
+				if (choice2 == 1) {
+					System.out.print("Colour: Gold");
+					
+				}else if (choice2 == 2) {
+					System.out.println("Colour: Silver");
+				}else if (choice2 ==3) {
+					System.out.println("Colour:Rose Gold");	
+				}
+				System.out.println();
+				System.out.print("Room size = " + total_area2 + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_B);
+					
+					break;
+				
+					
+					
+		case 3:
+			
+			//user insert room size
+			double width3,length3,total_area3;
+			System.out.println("Enter width(in ft): ");
+			width3 = ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length3 =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area3 = width3 * length3; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Basic Colours: [1] Black [2] White [3] Green [4] Blue [5] Red [6] Yellow *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice3= ls.nextInt();
+
+			String t1c= "LIVING ROOM", t2c ="BEDROOM", t3c = "STUDY ROOM", t4c= "GAMING ROOM", t5c= "STUDIO", t6c= "KITCHEN", t7c= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type3 = ls.nextInt(); 
+			
+			while (type3 != 1 && type3 != 2 && type3 != 3 && type3 != 4 && type3 != 5 && type3 != 6 && type3 != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type3 = ls.nextInt(); 
+			}
+				
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type3 == 1) {
+					System.out.println("| DESIGN FOR " + t1c + " |");
+				}else if (type3 == 2) {
+					System.out.println("| DESIGN FOR " + t2c + " |");
+				}else if (type3 == 3) {	
+					System.out.println("| DESIGN FOR " + t3c + " |");
+				}else if (type3 == 4) {
+					System.out.println("| DESIGN FOR " + t4c + " |");
+				}else if (type3 == 5) {
+					System.out.println("| DESIGN FOR " + t5c + " |");
+				}else if (type3 == 6) {
+					System.out.println("| DESIGN FOR " + t6c + " |");
+				}else if (type3 == 7) {
+					System.out.println("| DESIGN FOR " + t7c + " |");
+				}	
+				
+				//Calculate price for design
+				int vintage=30; 
+				price12 = vintage * total_area3;
+				//Calculate for room painting
+				double basic3 = 2.20; /*Rm 2.20 per square feet*/
+				price1 = total_area3 * basic3;
+				
+				//Calculate Total Price for Set C
+				double set_C; /*(vintage + basic)*/
+				set_C = price12 + price1;
+				
+				System.out.println();
+				System.out.println("Set C: " + c);
+						
+				if (choice3 == 1) {
+					System.out.print("Colour: Black");
+					
+				}else if (choice3 == 2) {
+					System.out.println("Colour: White");
+				}else if (choice3 ==3) {
+					System.out.println("Colour:Green");	
+				}else if (choice3 == 4) {
+					System.out.println("Colour: Blue");
+				}else if (choice3 ==5) {
+					System.out.println("Colour:Red");	
+				}else if (choice3 ==6)
+					System.out.println("Colour:Yellow");		
+				System.out.println();
+				System.out.print("Room size = " + total_area3 + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_C);
+				break;
+		
+		case 4:
+			
+			//user insert room size
+			double width4,length4,total_area4;
+			System.out.println("Enter width(in ft): ");
+			width4 = ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length4 =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area4 = width4 * length4; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Premium Colours: [1] Gold [2] Silver [3] Rose Gold                       *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice4= ls.nextInt();
+
+			String t1d= "LIVING ROOM", t2d ="BEDROOM", t3d = "STUDY ROOM", t4d= "GAMING ROOM", t5d= "STUDIO", t6d= "KITCHEN", t7d= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type4 = ls.nextInt(); 
+			
+			while (type4 != 1 && type4 != 2 && type4 != 3 && type4!= 4 && type4 != 5 && type4 != 6 && type4 != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type = ls.nextInt(); 
+			}
+				//Calculate price for design
+				int vintage2 =30 ; 
+				price13 = vintage2 * total_area4;
+				//Calculate for room painting
+				double premium2 = 3.00; /*Rm 3.00 per square feet*/
+				price2 = total_area4 * premium2;
+				
+				//Calculate Total Price for Set D
+				double set_D;  /*(vintage + premium*/
+				set_D = price13 + price2;
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type4 == 1) {
+					System.out.println("| DESIGN FOR " + t1d + " |");
+				}else if (type4 == 2) {
+					System.out.println("| DESIGN FOR " + t2d+ " |");
+				}else if (type4 == 3) {	
+					System.out.println("| DESIGN FOR " + t3d + " |");
+				}else if (type4 == 4) {
+					System.out.println("| DESIGN FOR " + t4d + " |");
+				}else if (type4 == 5) {
+					System.out.println("| DESIGN FOR " + t5d + " |");
+				}else if (type4 == 6) {
+					System.out.println("| DESIGN FOR " + t6d + " |");
+				}else if (type4 == 7) {
+					System.out.println("| DESIGN FOR " + t7d + " |");
+					
+				}
+					System.out.println();
+					System.out.println("Set D: " + d);
+						
+				if (choice4 == 1) {
+					System.out.print("Colour: Gold");
+					
+				}else if (choice4 == 2) {
+					System.out.println("Colour: Silver");
+				}else if (choice4 ==3) {
+					System.out.println("Colour:Rose Gold");	
+				}
+				System.out.println();
+				System.out.print("Room size = " + total_area4 + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_D);
+					
+					break;
+				
+					
+
+		case 5:
+			
+			//user insert room size
+			double width5,length5,total_area5;
+			System.out.println("Enter width(in ft): ");
+			width5 = ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length5 =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area5 = width5 * length5; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Basic Colours: [1] Black [2] White [3] Green [4] Blue [5] Red [6] Yellow *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice5= ls.nextInt();
+
+			String t1e= "LIVING ROOM", t2e ="BEDROOM", t3e = "STUDY ROOM", t4e= "GAMING ROOM", t5e= "STUDIO", t6e= "KITCHEN", t7e= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type5 = ls.nextInt(); 
+			
+			while (type5 != 1 && type5 != 2 && type5 != 3 && type5 != 4 && type5 != 5 && type5 != 6 && type5 != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type5 = ls.nextInt(); 
+			}
+				
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type5 == 1) {
+					System.out.println("| DESIGN FOR " + t1e + " |");
+				}else if (type5 == 2) {
+					System.out.println("| DESIGN FOR " + t2e + " |");
+				}else if (type5 == 3) {	
+					System.out.println("| DESIGN FOR " + t3e + " |");
+				}else if (type5 == 4) {
+					System.out.println("| DESIGN FOR " + t4e + " |");
+				}else if (type5 == 5) {
+					System.out.println("| DESIGN FOR " + t5e + " |");
+				}else if (type5 == 6) {
+					System.out.println("| DESIGN FOR " + t6e + " |");
+				}else if (type5 == 7) {
+					System.out.println("| DESIGN FOR " + t7e + " |");
+				}	
+				
+				//Calculate price for design
+				int traditional=35; 
+				price14 = traditional * total_area5;
+				//Calculate for room painting
+				double basic5 = 2.20; /*Rm 2.20 per square feet*/
+				price1 = total_area5 * basic5;
+				
+				//Calculate Total Price for Set E
+				double set_E; /*(Traditional + basic)*/
+				set_E = price14 + price1; 
+				
+				System.out.println();
+				System.out.println("Set E: " + e);
+						
+				if (choice5 == 1) {
+					System.out.print("Colour: Black");
+					
+				}else if (choice5 == 2) {
+					System.out.println("Colour: White");
+				}else if (choice5 ==3) {
+					System.out.println("Colour:Green");	
+				}else if (choice5 == 4) {
+					System.out.println("Colour: Blue");
+				}else if (choice5 ==5) {
+					System.out.println("Colour:Red");	
+				}else if (choice5 ==6)
+					System.out.println("Colour:Yellow");		
+				System.out.println();
+				System.out.print("Room size = " + total_area5 + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_E);
+				break;
+				
+		case 6:
+			
+			//user insert room size
+			double width6,length6,total_area6;
+			System.out.println("Enter width(in ft): ");
+			width6 = ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length6 =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area6 = width6 * length6; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Premium Colours: [1] Gold [2] Silver [3] Rose Gold                       *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice6= ls.nextInt();
+
+			String t1f = "LIVING ROOM", t2f ="BEDROOM", t3f = "STUDY ROOM", t4f= "GAMING ROOM", t5f= "STUDIO", t6f= "KITCHEN", t7f= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type6 = ls.nextInt(); 
+			
+			while (type6 != 1 && type6 != 2 && type6 != 3 && type6 != 4 && type6 != 5 && type6 != 6 && type6 != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type = ls.nextInt(); 
+			}
+				//Calculate price for design
+				int traditional2 =35 ; 
+				price15 =traditional2 * total_area6;
+				//Calculate for room painting
+				double premium3 = 3.00; /*Rm 3.00 per square feet*/
+				price2 = total_area6 * premium3;
+				
+				//Calculate Total Price for Set F
+				double set_F;  /*(vintage + premium*/
+				set_F = price15 + price2;
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type6 == 1) {
+					System.out.println("| DESIGN FOR " + t1f + " |");
+				}else if (type6 == 2) {
+					System.out.println("| DESIGN FOR " + t2f+ " |");
+				}else if (type6 == 3) {	
+					System.out.println("| DESIGN FOR " + t3f + " |");
+				}else if (type6 == 4) {
+					System.out.println("| DESIGN FOR " + t4f + " |");
+				}else if (type6 == 5) {
+					System.out.println("| DESIGN FOR " + t5f + " |");
+				}else if (type6 == 6) {
+					System.out.println("| DESIGN FOR " + t6f + " |");
+				}else if (type6 == 7) {
+					System.out.println("| DESIGN FOR " + t7f + " |");
+					
+				}
+					System.out.println();
+					System.out.println("Set F: " + f);
+						
+				if (choice6== 1) {
+					System.out.print("Colour: Gold");
+					
+				}else if (choice6 == 2) {
+					System.out.println("Colour: Silver");
+				}else if (choice6 ==3) {
+					System.out.println("Colour:Rose Gold");	
+				}
+				System.out.println();
+				System.out.print("Room size = " + total_area6 + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_F);
+					
+					break;
+					
+		case 7:
+			
+			//user insert room size
+			double width7,length7,total_area7;
+			System.out.println("Enter width(in ft): ");
+			width7= ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length7 =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area7 = width7 * length7; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Basic Colours: [1] Black [2] White [3] Green [4] Blue [5] Red [6] Yellow *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice7= ls.nextInt();
+
+			String t1g= "LIVING ROOM", t2g ="BEDROOM", t3g = "STUDY ROOM", t4g= "GAMING ROOM", t5g= "STUDIO", t6g= "KITCHEN", t7g= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type7 = ls.nextInt(); 
+			
+			while (type7 != 1 && type7 != 2 && type7 != 3 && type7 != 4 && type7 != 5 && type7 != 6 && type7 != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type5 = ls.nextInt(); 
+			}
+				
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type7 == 1) {
+					System.out.println("| DESIGN FOR " + t1g + " |");
+				}else if (type7 == 2) {
+					System.out.println("| DESIGN FOR " + t2g + " |");
+				}else if (type7 == 3) {	
+					System.out.println("| DESIGN FOR " + t3g + " |");
+				}else if (type7 == 4) {
+					System.out.println("| DESIGN FOR " + t4g + " |");
+				}else if (type7 == 5) {
+					System.out.println("| DESIGN FOR " + t5g + " |");
+				}else if (type7 == 6) {
+					System.out.println("| DESIGN FOR " + t6g + " |");
+				}else if (type7 == 7) {
+					System.out.println("| DESIGN FOR " + t7g + " |");
+				}	
+				
+				//Calculate price for design
+				int custom1=45; 
+				price16 = custom1 * total_area7;
+				//Calculate for room painting
+				double basic4 = 2.20; /*Rm 2.20 per square feet*/
+				price1 = total_area7 * basic4;
+				
+				//Calculate Total Price for Set E
+				double set_G; /*(Traditional + basic)*/
+				set_G = price16 + price1; 
+				
+				System.out.println();
+				System.out.println("Set G: " + g);
+						
+				if (choice7 == 1) {
+					System.out.print("Colour: Black");
+					
+				}else if (choice7 == 2) {
+					System.out.println("Colour: White");
+				}else if (choice7 ==3) {
+					System.out.println("Colour:Green");	
+				}else if (choice7 == 4) {
+					System.out.println("Colour: Blue");
+				}else if (choice7==5) {
+					System.out.println("Colour:Red");	
+				}else if (choice7 ==6)
+					System.out.println("Colour:Yellow");		
+				System.out.println();
+				System.out.print("Room size = " + total_area7 + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_G);
+				break;
+				
+	case 8:
+			
+			//user insert room size
+			double width8,length8,total_area8;
+			System.out.println("Enter width(in ft): ");
+			width8 = ls.nextDouble();
+			System.out.println("Enter length (in ft): ");
+			length8 =ls.nextDouble();
+			
+			
+			System.out.println();
+			
+			//Calculate total area
+			total_area8 = width8 * length8; 
+			
+			System.out.println("\n* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+			System.out.print("*                                                                           *");
+			System.out.println();
+			System.out.println("*  Premium Colours: [1] Gold [2] Silver [3] Rose Gold                       *");
+			System.out.print("*                                                                           *");
+			System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+			System.out.println();
+			System.out.println("Please Choose Colour: ");
+			int  choice8= ls.nextInt();
+
+			String t1h = "LIVING ROOM", t2h ="BEDROOM", t3h = "STUDY ROOM", t4h= "GAMING ROOM", t5h= "STUDIO", t6h= "KITCHEN", t7h= "TOILET"; 
+			
+			System.out.println("[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet");
+			System.out.println("Enter code:  ");
+			int type8 = ls.nextInt(); 
+			
+			while (type8 != 1 && type8 != 2 && type8 != 3 && type8 != 4 && type8 != 5 && type8 != 6 && type8 != 7) {
+				System.out.println();
+				System.out.println("INVALID");
+				System.out.println("Enter code: ");
+				type = ls.nextInt(); 
+			}
+				//Calculate price for design
+				int custom2 =45 ; 
+				price17 =custom2 * total_area8;
+				//Calculate for room painting
+				double premium4= 3.00; /*Rm 3.00 per square feet*/
+				price2 = total_area8 * premium4;
+				
+				//Calculate Total Price for Set H
+				double set_H;  /*(vintage + premium*/
+				set_H = price17 + price2;
+				
+				System.out.println("\n________________________________________________");
+				System.out.println();
+				System.out.print("          **MERIDIAN INTERIORS ORDER RECEIPT**    ");
+				System.out.println("\n________________________________________________");
+				System.out.println();
+	
+			
+			
+				if(type8 == 1) {
+					System.out.println("| DESIGN FOR " + t1h + " |");
+				}else if (type8 == 2) {
+					System.out.println("| DESIGN FOR " + t2h+ " |");
+				}else if (type8 == 3) {	
+					System.out.println("| DESIGN FOR " + t3h + " |");
+				}else if (type8 == 4) {
+					System.out.println("| DESIGN FOR " + t4h + " |");
+				}else if (type8 == 5) {
+					System.out.println("| DESIGN FOR " + t5h + " |");
+				}else if (type8 == 6) {
+					System.out.println("| DESIGN FOR " + t6h + " |");
+				}else if (type8 == 7) {
+					System.out.println("| DESIGN FOR " + t7h + " |");
+					
+				}
+					System.out.println();
+					System.out.println("Set H: " + h);
+						
+				if (choice8== 1) {
+					System.out.print("Colour: Gold");
+					
+				}else if (choice8 == 2) {
+					System.out.println("Colour: Silver");
+				}else if (choice8 ==3) {
+					System.out.println("Colour:Rose Gold");	
+				}
+				System.out.println();
+				System.out.print("Room size = " + total_area8 + " sqf");
+				System.out.print("\n----------------------------------------");
+				System.out.println();
+				System.out.println("Total Price: " + set_H);
+					
+					break;
+				}
+			}
+		}
+			
+
+		
