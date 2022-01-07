@@ -1,0 +1,61 @@
+Hello, Welcome to MERIDAN INTERIORS! 
+Please make sure you insert the right code and spelling while filling the form :D
+Do follow the instructions below.
+
+
+________________________________________
+
+          **MERIDIAN INTERIORS**    
+________________________________________
+
+
+
+* * * * * * * Package * * * * * * * * 
+*                                   *
+*  1-Set A: Modern + Basic          *
+*  2-Set B: Modern + Premium        *
+*  3-Set C: Vintage + Basic         *
+*  4-Set D:  Vintage + Premium      *
+*  5-Set E: Traditional + Basic     *
+*  6-Set F: Traditional + Premium   *
+*  7-Set G: Custom + Basic          *
+*  8-Set H: Custom + Premium        *
+*                                   *
+*                                   *
+* * * * * * * * * * * * * * * * * * *
+
+
+
+Please Choose Your Package: 
+8
+Enter width(in ft): 
+10
+Enter length (in ft): 
+10
+
+
+* * * * * * * Colours * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                                                                           *
+*  Premium Colours: [1] Gold [2] Silver [3] Rose Gold                       *
+*                                                                           *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+Please Choose Colour: 
+3
+[1] living room, [2] bedroom, [3] study room, [4] gaming room, [5] studio, [6] kitchen, or [7] toilet
+Enter code:  
+1
+
+________________________________________________
+
+          **MERIDIAN INTERIORS ORDER RECEIPT**    
+________________________________________________
+
+| DESIGN FOR LIVING ROOM |
+
+Set H: Custom + Premium
+Colour:Rose Gold
+
+Room size = 100.0 sqf
+----------------------------------------
+Total Price: 4800.0
